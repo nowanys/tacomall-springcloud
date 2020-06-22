@@ -4997,6 +4997,250 @@
         "nodes": [],
         "edges": []
       }
+    },
+    {
+      "name": "activity",
+      "chnname": "活动",
+      "entities": [
+        {
+          "title": "activity",
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "remark": "主键",
+              "chnname": "",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "name",
+              "type": "DefaultString",
+              "remark": "名称",
+              "chnname": ""
+            },
+            {
+              "name": "description",
+              "type": "MiddleString",
+              "remark": "描述",
+              "chnname": ""
+            },
+            {
+              "name": "cover",
+              "type": "DefaultString",
+              "remark": "封面",
+              "chnname": ""
+            },
+            {
+              "name": "url",
+              "type": "ShortString",
+              "remark": "H5地址",
+              "chnname": ""
+            },
+            {
+              "name": "is_delete",
+              "type": "Integer",
+              "remark": "删除标记",
+              "chnname": "",
+              "defaultValue": "0"
+            },
+            {
+              "name": "create_time",
+              "type": "DateTime",
+              "remark": "创建时间",
+              "chnname": ""
+            },
+            {
+              "name": "update_time",
+              "type": "DateTime",
+              "remark": "更新时间",
+              "chnname": ""
+            },
+            {
+              "name": "delete_time",
+              "type": "DateTime",
+              "remark": "删除时间",
+              "chnname": ""
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "活动主表"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [],
+        "edges": []
+      },
+      "associations": []
+    },
+    {
+      "name": "seckill",
+      "chnname": "秒杀",
+      "entities": [
+        {
+          "title": "seckill",
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "remark": "主键",
+              "chnname": "",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "goods_item_id",
+              "type": "Integer",
+              "remark": "商品外键",
+              "chnname": ""
+            },
+            {
+              "name": "stock",
+              "type": "DefaultString",
+              "remark": "秒杀库存",
+              "chnname": ""
+            },
+            {
+              "name": "start_time",
+              "type": "DefaultString",
+              "remark": "开启时间",
+              "chnname": ""
+            },
+            {
+              "name": "end_tme",
+              "type": "DefaultString",
+              "remark": "结束时间",
+              "chnname": ""
+            },
+            {
+              "name": "is_delete",
+              "type": "Integer",
+              "remark": "删除标记",
+              "chnname": "",
+              "defaultValue": "0"
+            },
+            {
+              "name": "create_time",
+              "type": "DateTime",
+              "remark": "创建时间",
+              "chnname": ""
+            },
+            {
+              "name": "update_time",
+              "type": "DateTime",
+              "remark": "更新时间",
+              "chnname": ""
+            },
+            {
+              "name": "delete_time",
+              "type": "DateTime",
+              "remark": "删除时间",
+              "chnname": ""
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "秒杀主表"
+        }
+      ],
+      "graphCanvas": {
+        "nodes": [],
+        "edges": []
+      },
+      "associations": []
     }
   ],
   "dataTypeDomains": {
