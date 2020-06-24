@@ -1078,7 +1078,7 @@
             },
             {
               "name": "name",
-              "type": "DefaultString",
+              "type": "MiddleString",
               "remark": "名称",
               "chnname": ""
             },
@@ -1089,9 +1089,15 @@
               "chnname": ""
             },
             {
-              "name": "discription",
+              "name": "description",
               "type": "MiddleString",
               "remark": "描述",
+              "chnname": ""
+            },
+            {
+              "name": "json_attr",
+              "type": "MiddleString",
+              "remark": "属性json数据",
               "chnname": ""
             },
             {
@@ -1195,7 +1201,7 @@
             },
             {
               "name": "name",
-              "type": "DefaultString",
+              "type": "MiddleString",
               "remark": "名称",
               "chnname": ""
             },
@@ -1206,7 +1212,7 @@
               "chnname": ""
             },
             {
-              "name": "discription",
+              "name": "description",
               "type": "MiddleString",
               "remark": "描述",
               "chnname": ""
@@ -1284,6 +1290,30 @@
               "chnname": ""
             },
             {
+              "name": "album_images",
+              "type": "DefaultString",
+              "remark": "相册",
+              "chnname": ""
+            },
+            {
+              "name": "album_mobile_images",
+              "type": "DefaultString",
+              "remark": "移动端相册",
+              "chnname": ""
+            },
+            {
+              "name": "detail_images",
+              "type": "DefaultString",
+              "remark": "详情图片",
+              "chnname": ""
+            },
+            {
+              "name": "detail_mobile_images",
+              "type": "DefaultString",
+              "remark": "移动端详情图片",
+              "chnname": ""
+            },
+            {
               "name": "is_delete",
               "type": "Integer",
               "remark": "删除标记",
@@ -1357,124 +1387,6 @@
             }
           ],
           "chnname": "商品表"
-        },
-        {
-          "title": "goods_item_images",
-          "fields": [
-            {
-              "name": "id",
-              "type": "Integer",
-              "remark": "主键",
-              "chnname": "",
-              "autoIncrement": true,
-              "notNull": true,
-              "pk": true
-            },
-            {
-              "name": "goods_item_id",
-              "type": "Integer",
-              "remark": "商品表外键",
-              "chnname": ""
-            },
-            {
-              "name": "album_images",
-              "type": "ShortString",
-              "remark": "画册图片，连产品图片限制为5张，以逗号分割",
-              "chnname": ""
-            },
-            {
-              "name": "album_mobile_images",
-              "type": "ShortString",
-              "remark": "移动端画册图片，连产品图片限制为5张，以逗号分割",
-              "chnname": ""
-            },
-            {
-              "name": "detail_images",
-              "type": "ShortString",
-              "remark": "详情图片，以逗号分割",
-              "chnname": ""
-            },
-            {
-              "name": "detail_mobile_images",
-              "type": "ShortString",
-              "remark": "移动端详情图片，以逗号分割",
-              "chnname": ""
-            },
-            {
-              "name": "is_delete",
-              "type": "Integer",
-              "remark": "删除标记",
-              "chnname": "",
-              "autoIncrement": false,
-              "defaultValue": "0"
-            },
-            {
-              "name": "create_time",
-              "type": "DateTime",
-              "remark": "创建时间",
-              "chnname": ""
-            },
-            {
-              "name": "update_time",
-              "type": "DateTime",
-              "remark": "更新时间",
-              "chnname": ""
-            },
-            {
-              "name": "delete_time",
-              "type": "DateTime",
-              "remark": "删除时间",
-              "chnname": ""
-            }
-          ],
-          "indexs": [],
-          "headers": [
-            {
-              "fieldName": "chnname",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "name",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "type",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "dataType",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "remark",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "pk",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "notNull",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "autoIncrement",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "defaultValue",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "relationNoShow",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "uiHint",
-              "relationNoShow": true
-            }
-          ],
-          "chnname": "商品图片表"
         },
         {
           "title": "goods_attr_category",
@@ -1772,111 +1684,6 @@
             }
           ],
           "chnname": "商品属性值表"
-        },
-        {
-          "title": "goods_mapping_attr",
-          "fields": [
-            {
-              "name": "id",
-              "type": "Integer",
-              "remark": "主键",
-              "chnname": "",
-              "pk": true,
-              "notNull": true,
-              "autoIncrement": true
-            },
-            {
-              "name": "goods_id",
-              "type": "Integer",
-              "remark": "产品表外键",
-              "chnname": ""
-            },
-            {
-              "name": "attr_key_id",
-              "type": "Integer",
-              "remark": "属性键表外键",
-              "chnname": ""
-            },
-            {
-              "name": "attr_value_id",
-              "type": "Integer",
-              "remark": "属性值表外键",
-              "chnname": ""
-            },
-            {
-              "name": "is_delete",
-              "type": "Integer",
-              "remark": "删除标记",
-              "chnname": "",
-              "defaultValue": "0"
-            },
-            {
-              "name": "create_time",
-              "type": "DateTime",
-              "remark": "创建时间",
-              "chnname": ""
-            },
-            {
-              "name": "update_time",
-              "type": "DateTime",
-              "remark": "更新时间",
-              "chnname": ""
-            },
-            {
-              "name": "delete_time",
-              "type": "DateTime",
-              "remark": "删除时间",
-              "chnname": ""
-            }
-          ],
-          "indexs": [],
-          "headers": [
-            {
-              "fieldName": "chnname",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "name",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "type",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "dataType",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "remark",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "pk",
-              "relationNoShow": false
-            },
-            {
-              "fieldName": "notNull",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "autoIncrement",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "defaultValue",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "relationNoShow",
-              "relationNoShow": true
-            },
-            {
-              "fieldName": "uiHint",
-              "relationNoShow": true
-            }
-          ],
-          "chnname": "商品/商品属性中间关联表"
         },
         {
           "title": "goods_evaluate",
