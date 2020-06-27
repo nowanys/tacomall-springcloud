@@ -162,6 +162,8 @@ git clone https://gitee.com/running-cat/tacomall-springcloud.git
 导入项目（_doc/pdman/tacomall.pdman.json）->配置数据库->运行导入mysql
 ```
 
+初始化了数据库后，为了有数据展示，我们提供了一个简易的[京东爬虫程序](https://gitee.com/running-cat/tacomall-springboot/tree/master/_doc/jd)用于初始化数据库数据
+
 6. 修改数据库配置
 
 在每个服务项目中（src/main/resources/application-dev.yml）修改相应的数据库配置。
