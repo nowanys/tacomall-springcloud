@@ -1,0 +1,18 @@
+server:
+  port: 8000
+spring:
+  profiles:
+    active: @environment@
+  application:
+    name: service-biz-member
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+mybatis-plus:
+  type-aliases-package: cn.codingtalk.tacomallservicebizmember
+  mapper-locations: classpath:/mapper/**/*Mapper.xml

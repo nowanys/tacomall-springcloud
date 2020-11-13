@@ -1,0 +1,28 @@
+server:
+  port: 8001
+spring:
+  profiles:
+    active: @environment@
+  application:
+    name: service-biz-op
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+logging:
+  level:
+    org.springframework.web: info
+    com.github.binarywang.demo.wx.miniapp: debug
+    cn.binarywang.wx.miniapp: debug
+wx:
+  miniapp:
+    configs:
+      - appid: wx1492e33a9a6b64a3
+        secret: 2f84b1d33021937de1ead133fde06a4e
+        token:
+        aesKey:
+        msgDataFormat: JSON
