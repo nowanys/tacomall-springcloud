@@ -1,0 +1,38 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: api-admin
+  profiles:
+    active: @environment@
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-aliases-package: store.tacomall.db
+  mapper-locations: classpath:/mapper/*Mapper.xml

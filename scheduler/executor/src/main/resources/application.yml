@@ -1,0 +1,15 @@
+server:
+  port: 7041
+spring:
+  application:
+    name: job-executor
+  profiles:
+    active: @environment@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

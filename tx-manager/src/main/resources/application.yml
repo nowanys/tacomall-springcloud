@@ -1,0 +1,17 @@
+server:
+  port: 7050
+
+spring:
+  application:
+    name: tx-manager
+  profiles:
+    active: @environment@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
