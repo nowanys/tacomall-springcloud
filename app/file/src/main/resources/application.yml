@@ -1,0 +1,28 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: app-file
+  profiles:
+    active: @environment@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+logging:
+  level:
+    org.springframework.web: info
+    com.github.binarywang.demo.wx.miniapp: debug
+    cn.binarywang.wx.miniapp: debug
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-aliases-package: store.tacomall.db
+  mapper-locations: classpath:/mapper/*Mapper.xml

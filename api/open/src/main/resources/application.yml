@@ -1,0 +1,26 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: api-open
+  profiles:
+    active: @environment@
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-aliases-package: store.tacomall.db
+  mapper-locations: classpath:/mapper/*Mapper.xml

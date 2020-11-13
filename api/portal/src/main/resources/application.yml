@@ -1,0 +1,29 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: api-portal
+  profiles:
+    active: @environment@
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-aliases-package: store.tacomall.db
+  mapper-locations: classpath:/mapper/*Mapper.xml, classpath*:/dao/*Dao.xml
+wx:
+  miniapp:
+      appid: wx1492e33a9a6b64a3
