@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-11-13 17:29:44
- * @LastEditTime: 2020-11-13 18:48:24
+ * @LastEditTime: 2020-11-13 20:49:35
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/api/portal/src/main/java/store/tacomall/apiportal/pojo/MemberPojo.java
