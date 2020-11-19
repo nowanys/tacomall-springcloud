@@ -5,3 +5,7 @@ spring:
     name: eureka
   profiles:
     active: @environment@
+  security:
+    user:
+      name: root
+      password: 123456
