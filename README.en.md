@@ -54,6 +54,41 @@ spring cloud微服务基于spirngboot开发，还没有springboot开发基础？
 
 如果你发现项目不错，不要忘记给项目点个赞👍，你的支持是我们前进的动力 :)
 ```
+
+## 演示
+
+<table border="0">
+    <tr>
+        <td>微信小程序（微信扫一扫）</td>
+        <td>商家管理后台</td>
+    </tr>
+    <tr>
+        <td><img title="码上talk" src="https://img.codingtalk.cn/cH6X2n51606387646573" height="200" width="200"/></td>
+        <td><a href="http://tacomall.codingtalk.cn">>>>点击进入商家管理后台</td>
+    </tr>
+</table>
+
+## 社区
+
+<table border="0">
+    <tr>
+        <td>关注“码上talk”微信公众号</td>
+        <td>tacomall QQ交流群</td>
+        <td>我的微信</td>
+    </tr>
+    <tr>
+        <td><img title="码上talk" src="https://img.codingtalk.cn/ncr3m3k1585147351285" height="200" width="200"/></td>
+        <td><img title="tacomall QQ交流群" src="https://img.codingtalk.cn/haPkJxc1585147447571" height="200" width="220"/></td>
+        <td><img title="码上talk|RC" src="https://img.codingtalk.cn/meJzskn1584540440273" height="200" width="220"/></td>
+    </tr>
+</table>
+
+<p>如果您觉得有帮助，请点右上角 "Star" 支持一下谢谢</p>
+
+<p>如果您对此项目感兴趣，请点右上角 "Star" 支持一下谢谢</p>
+
+<p>如果需要帮助请留言或者加微信，晚上20：00后统一回复解决</p>
+
 ## 项目结构
 
 通过项目结构，你将清楚明白你即将入手的是一个怎么样的项目，你可能需要什么，如何快速的把它变成自己的产品。
@@ -172,14 +207,16 @@ git clone https://gitee.com/running-cat/tacomall-springcloud.git
 
 项目中有许多微服务，眼花缭乱的你不用惊慌，其实每个服务的启动方式和springboot是一样的,只不过是我们需要注意启动顺序。
 
-> 为了快速看见效果，在保证启动tacomall-eureka、tacomall-config、tacomall-admin下，只需启动tacomall-service/app-member和api/api-portal
+> 为了快速看见效果，在保证启动tacomall-eureka,monitor下，只需启动tacomall-service/app-member,tacomall-service/app-op和api/api-portal
 
 ## 测试
 
 看到这里，我们认为你已经正确配置启动项目了，接下来你将通过postman看到实际效果。
 
 ```
-http://localhost:7010/portal/member/login
+通过tacomall-uniapp登录页调用接口更加哟 :-)
+
+http://localhost:4000/portal/member/wxMaLogin
 ```
 
 ## 部署
@@ -208,24 +245,3 @@ http://localhost:7010/portal/member/login
 ## 版权声明
 
 项目在[Apache License 2.0](https://gitee.com/running-cat/tacomall-springcloud/blob/master/LICENSE)下自由使用。
-
-## 社区
-
-<table border="0">
-    <tr>
-        <td>关注“码上talk”微信公众号</td>
-        <td>tacomall QQ交流群</td>
-        <td>我的微信</td>
-    </tr>
-    <tr>
-        <td><img title="码上talk" src="https://img.codingtalk.cn/ncr3m3k1585147351285" height="200" width="200"/></td>
-        <td><img title="tacomall QQ交流群" src="https://img.codingtalk.cn/haPkJxc1585147447571" height="200" width="220"/></td>
-        <td><img title="码上talk|RC" src="https://img.codingtalk.cn/meJzskn1584540440273" height="200" width="220"/></td>
-    </tr>
-</table>
-
-<p>如果您觉得有帮助，请点右上角 "Star" 支持一下谢谢</p>
-
-<p>如果您对此项目感兴趣，请点右上角 "Star" 支持一下谢谢</p>
-
-<p>如果需要帮助请留言或者加微信，晚上20：00后统一回复解决</p>
