@@ -1,8 +1,8 @@
 server:
-  port: 9000
+  port: 10000
 spring:
   application:
-    name: api-portal
+    name: auth
   profiles:
     active: @environment@
 feign:
@@ -12,8 +12,14 @@ hystrix:
   command:
     default:
       execution:
+        timeout:
+          enabled: true
         isolation:
-          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 30000
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
 management:
   endpoints:
     web:
@@ -29,7 +35,4 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
   type-aliases-package: store.tacomall.db
-  mapper-locations: classpath:/mapper/*Mapper.xml, classpath*:/dao/*Dao.xml
-wx:
-  miniapp:
-      appid: wx1492e33a9a6b64a3
+  mapper-locations: classpath:/mapper/*Mapper.xml

@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:09
- * @LastEditTime: 2020-11-13 09:45:30
+ * @LastEditTime: 2020-12-03 17:39:25
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/gateway/src/main/java/store/tacomall/gateway/config/SwaggerResourcesProviderConfig.java
@@ -35,7 +35,7 @@ public class SwaggerResourcesProviderConfig implements SwaggerResourcesProvider 
 
     @Override
     public List<SwaggerResource> get() {
-        List resources = new ArrayList();
+        List<SwaggerResource> resources = new ArrayList();
         List<Route> routes = routeLocator.getRoutes();
         for (Route route : routes) {
             resources.add(swaggerResource(route.getId(), route.getFullPath().replace("**", "v2/api-docs"), "2.0"));

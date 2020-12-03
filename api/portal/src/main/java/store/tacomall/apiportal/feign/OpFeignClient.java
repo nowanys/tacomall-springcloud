@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-15 15:36:35
- * @LastEditTime: 2020-11-13 10:44:51
+ * @LastEditTime: 2020-12-03 17:21:56
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/api/portal/src/main/java/store/tacomall/apiportal/feign/OpFeignClient.java
@@ -18,8 +18,9 @@ import org.springframework.web.bind.annotation.*;
 
 import store.tacomall.common.dto.AppDto;
 import store.tacomall.common.util.ExceptionUtil;
+import store.tacomall.apiportal.config.FeignConfig;
 
-@FeignClient(name = "app-op", fallbackFactory = OpFeignClientFallbackFactory.class)
+@FeignClient(name = "app-op", configuration = FeignConfig.class, fallbackFactory = OpFeignClientFallbackFactory.class)
 public interface OpFeignClient {
 
     @RequestMapping(value = "/WxMa/{APPID}/user/login", method = RequestMethod.GET)
