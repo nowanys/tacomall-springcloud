@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:09
- * @LastEditTime: 2020-11-13 18:43:33
+ * @LastEditTime: 2020-12-04 10:35:52
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/api/portal/src/main/java/store/tacomall/apiportal/controller/MemberController.java
@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import store.tacomall.common.annotation.LoginUser;
 import store.tacomall.common.vo.ResponseVo;
+import store.tacomall.apiportal.entity.PortalMember;
 import store.tacomall.apiportal.service.MemberService;
-import store.tacomall.apiportal.pojo.MemberPojo;
 
 @Api("会员模块")
 @RestController
@@ -57,7 +57,7 @@ public class MemberController {
     @ApiImplicitParams({})
     @LoginUser
     @PostMapping("info")
-    public ResponseVo<MemberPojo> info() {
+    public ResponseVo<PortalMember> info() {
         return memberService.info();
     }
 }

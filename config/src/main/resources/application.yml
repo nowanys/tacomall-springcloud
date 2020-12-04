@@ -2,7 +2,7 @@ server:
   port: 7020
 spring:
   application:
-    name: config-server
+    name: config
   profiles:
     active: @environment@
 management:

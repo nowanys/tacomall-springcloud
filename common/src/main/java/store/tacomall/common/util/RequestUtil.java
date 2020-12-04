@@ -1,10 +1,10 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:09
- * @LastEditTime: 2020-06-16 21:26:59
+ * @LastEditTime: 2020-12-04 11:39:02
  * @LastEditors: 码上talk|RC
  * @Description: 
- * @FilePath: /tacomall-springcloud/common/src/main/java/cn/codingtalk/tacomallcommon/util/RequestUtil.java
+ * @FilePath: /tacomall-springcloud/common/src/main/java/store/tacomall/common/util/RequestUtil.java
  * @Just do what I think it is right
  */
 
@@ -23,6 +23,6 @@ public class RequestUtil extends JSONObject {
     public static JSONObject getLoginUser() {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
                 .getRequest();
-        return (JSONObject) JSONObject.toJSON(request.getAttribute("LOGIN_USER_KEY"));
+        return (JSONObject) JSONObject.toJSON(request.getAttribute("LOGINED_USER"));
     }
 }

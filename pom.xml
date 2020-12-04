@@ -9,13 +9,13 @@
 
     <modules>
         <module>common</module>
-        <module>db</module>
         <module>register</module>
         <module>gateway</module>
         <module>config</module>
         <module>monitor</module>
         <module>scheduler/admin</module>
         <module>scheduler/executor</module>
+        <module>auth</module>
         <module>app/op</module>
         <module>app/member</module>
         <module>app/file</module>
@@ -71,11 +71,6 @@
             <dependency>
                 <groupId>store.tacomall</groupId>
                 <artifactId>common</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>store.tacomall</groupId>
-                <artifactId>db</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

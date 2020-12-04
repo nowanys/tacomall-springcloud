@@ -13,12 +13,12 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import store.tacomall.common.vo.ResponseVo;
-import store.tacomall.db.entity.member.Member;
-import store.tacomall.apiportal.pojo.MemberPojo;
+import store.tacomall.apiportal.entity.PortalMember;
+import store.tacomall.common.db.entity.member.Member;
 
 public interface MemberService extends IService<Member> {
 
     ResponseVo<String> wxMaLogin(String appid, JSONObject json) throws Exception;
 
-    ResponseVo<MemberPojo> info();
+    ResponseVo<PortalMember> info();
 }

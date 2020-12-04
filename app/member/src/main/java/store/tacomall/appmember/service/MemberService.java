@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:09
- * @LastEditTime: 2020-11-13 09:13:29
+ * @LastEditTime: 2020-12-04 08:40:13
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/app/member/src/main/java/store/tacomall/appmember/service/MemberService.java
@@ -12,7 +12,7 @@ package store.tacomall.appmember.service;
 import com.alibaba.fastjson.JSONObject;
 
 import store.tacomall.common.dto.AppDto;
-import store.tacomall.db.entity.member.Member;
+import store.tacomall.common.db.entity.member.Member;
 
 public interface MemberService {
 

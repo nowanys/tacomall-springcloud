@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:09
- * @LastEditTime: 2020-11-12 10:30:03
+ * @LastEditTime: 2020-12-04 14:18:30
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/common/src/main/java/store/tacomall/common/util/JwtUtil.java
@@ -21,7 +21,6 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
-import cn.hutool.core.date.DateField;
 import cn.hutool.core.date.DateUtil;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
@@ -31,7 +30,7 @@ import store.tacomall.common.exceptionInterceptor.exception.BizException;
 
 public class JwtUtil {
 
-    private String SECRET = "codingtalk";
+    private String SECRET = "tacomall";
     private String ISSUER = "";
 
     public JwtUtil setISSUER(String ISSUER) {
@@ -47,7 +46,7 @@ public class JwtUtil {
             claims.forEach(builder::withClaim);
             return builder.sign(algorithm);
         } catch (IllegalArgumentException | JWTCreationException e) {
-            throw new BizException("生成token失败");
+            throw new BizException("Genarate token fail");
         }
     }
 
@@ -60,7 +59,7 @@ public class JwtUtil {
             DecodedJWT jwt = verifier.verify(token);
             map = jwt.getClaims();
         } catch (JWTVerificationException e) {
-            throw new BizException("鉴权失败");
+            throw new BizException("Token verify failed");
         }
         Map<String, String> resultMap = new HashMap<>(map.size());
         map.forEach((k, v) -> resultMap.put(k, v.asString()));

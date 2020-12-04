@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:09
- * @LastEditTime: 2020-11-13 20:46:52
+ * @LastEditTime: 2020-12-04 08:40:30
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/app/member/src/main/java/store/tacomall/appmember/service/impl/MemberServiceImpl.java
@@ -31,10 +31,10 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import store.tacomall.common.dto.AppDto;
 import store.tacomall.common.util.ExceptionUtil;
-import store.tacomall.db.entity.member.Member;
-import store.tacomall.db.entity.member.MemberStatisticsInfo;
-import store.tacomall.db.mapper.member.MemberMapper;
-import store.tacomall.db.mapper.member.MemberStatisticsInfoMapper;
+import store.tacomall.common.db.entity.member.Member;
+import store.tacomall.common.db.entity.member.MemberStatisticsInfo;
+import store.tacomall.common.db.mapper.member.MemberMapper;
+import store.tacomall.common.db.mapper.member.MemberStatisticsInfoMapper;
 import store.tacomall.appmember.service.MemberService;
 
 @Service

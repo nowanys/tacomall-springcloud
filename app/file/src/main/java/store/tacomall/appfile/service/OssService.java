@@ -14,7 +14,7 @@ package store.tacomall.appfile.service;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
-import store.tacomall.db.entity.oss.OssObject;
+import store.tacomall.common.db.entity.oss.OssObject;
 
 public interface OssService {
 

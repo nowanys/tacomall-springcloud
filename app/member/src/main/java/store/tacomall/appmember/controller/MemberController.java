@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:09
- * @LastEditTime: 2020-11-13 09:12:49
+ * @LastEditTime: 2020-12-04 08:40:05
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/app/member/src/main/java/store/tacomall/appmember/controller/MemberController.java
@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import store.tacomall.common.dto.AppDto;
-import store.tacomall.db.entity.member.Member;
+import store.tacomall.common.db.entity.member.Member;
 import store.tacomall.appmember.service.MemberService;
 
 @RestController

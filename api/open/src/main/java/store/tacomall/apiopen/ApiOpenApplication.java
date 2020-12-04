@@ -15,7 +15,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableFeignClients
-@MapperScan("store.tacomall.db.mapper")
+@MapperScan("store.tacomall.common.db.mapper")
 @SpringBootApplication(scanBasePackages = { "store.tacomall.common", "store.tacomall.apiopen" })
 public class ApiOpenApplication {
 

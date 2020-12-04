@@ -19,5 +19,5 @@ mybatis-plus:
       logic-delete-field: isDelete
       logic-delete-value: 1
       logic-not-delete-value: 0
-  type-aliases-package: store.tacomall.db
+  type-aliases-package: store.tacomall.common.db
   mapper-locations: classpath:/mapper/*Mapper.xml

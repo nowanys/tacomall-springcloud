@@ -1,25 +1,23 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:09
- * @LastEditTime: 2020-11-11 14:32:52
+ * @LastEditTime: 2020-12-04 10:28:47
  * @LastEditors: 码上talk|RC
  * @Description: 
- * @FilePath: /tacomall-springcloud/api/admin/src/main/java/store/tacomall/apiadmin/ApiAdminApplication.java
+ * @FilePath: /tacomall-springcloud/auth/src/main/java/store/tacomall/auth/AuthApplication.java
  * @Just do what I think it is right
  */
-package store.tacomall.apiadmin;
+package store.tacomall.auth;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@EnableFeignClients
 @MapperScan("store.tacomall.db.mapper")
-@SpringBootApplication(scanBasePackages = { "store.tacomall.common", "store.tacomall.apiadmin" })
-public class ApiAdminApplication {
+@SpringBootApplication(scanBasePackages = { "store.tacomall.common", "store.tacomall.auth" })
+public class AuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApiAdminApplication.class, args);
+        SpringApplication.run(AuthApplication.class, args);
     }
 }

@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:09
- * @LastEditTime: 2020-11-13 18:44:07
+ * @LastEditTime: 2020-12-04 11:17:44
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/api/portal/src/main/java/store/tacomall/apiportal/service/impl/MemberServiceImpl.java
@@ -32,19 +32,20 @@ import store.tacomall.common.dto.AppDto;
 import store.tacomall.common.util.IntUtil;
 import store.tacomall.common.util.JwtUtil;
 import store.tacomall.common.util.ExceptionUtil;
+import store.tacomall.common.util.RequestUtil;
 import store.tacomall.common.enumeration.BizEnum;
-import store.tacomall.db.entity.member.Member;
-import store.tacomall.db.entity.member.MemberWeixin;
-import store.tacomall.db.entity.member.MemberWeixinMa;
-import store.tacomall.db.mapper.member.MemberMapper;
-import store.tacomall.db.mapper.member.MemberWeixinMapper;
-import store.tacomall.db.mapper.member.MemberWeixinMaMapper;
-import store.tacomall.apiportal.pojo.MemberPojo;
-import store.tacomall.apiportal.dao.MemberDao;
+import store.tacomall.common.db.entity.member.Member;
+import store.tacomall.common.db.entity.member.MemberWeixin;
+import store.tacomall.common.db.entity.member.MemberWeixinMa;
+import store.tacomall.common.db.mapper.member.MemberMapper;
+import store.tacomall.common.db.mapper.member.MemberWeixinMapper;
+import store.tacomall.common.db.mapper.member.MemberWeixinMaMapper;
 import store.tacomall.apiportal.service.MemberService;
-import store.tacomall.apiportal.feign.MemberFeignClient;
-import store.tacomall.apiportal.feign.OpFeignClient;
+import store.tacomall.common.feign.MemberFeignClient;
+import store.tacomall.common.feign.OpFeignClient;
 import store.tacomall.apiportal.config.WxMiniappConfig;
+import store.tacomall.apiportal.entity.PortalMember;
+import store.tacomall.apiportal.mapper.PortalMemberMapper;
 
 @Service
 public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> implements MemberService {
@@ -56,7 +57,7 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
     private MemberWeixinMaMapper memberWeixinMaMapper;
 
     @Autowired
-    private MemberDao memberDao;
+    private PortalMemberMapper memberDao;
 
     @Autowired
     private MemberFeignClient memberFeignClient;
@@ -128,11 +129,12 @@ public class MemberServiceImpl extends ServiceImpl<MemberMapper, Member> impleme
         return responseVo;
     }
 
-    public ResponseVo<MemberPojo> info() {
-        ResponseVo<MemberPojo> responseVo = new ResponseVo<>();
+    public ResponseVo<PortalMember> info() {
+        ResponseVo<PortalMember> responseVo = new ResponseVo<>();
+        JSONObject loginUser = RequestUtil.getLoginUser();
         responseVo.setStatus(true);
-        responseVo
-                .setData(memberDao.getWeixinMaMember(new QueryWrapper<MemberPojo>().lambda().eq(MemberPojo::getId, 1)));
+        responseVo.setData(memberDao.getWeixinMaMember(
+                new QueryWrapper<PortalMember>().lambda().eq(PortalMember::getId, loginUser.get("id"))));
         return responseVo;
     }
 }
