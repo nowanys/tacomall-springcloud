@@ -11,22 +11,13 @@
  */
 package store.tacomall.auth.service.impl;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import store.tacomall.common.dto.AuthDto;
-import store.tacomall.common.util.JwtUtil;
 import store.tacomall.auth.service.AppService;
 
 @Service
 public class AppServiceImpl implements AppService {
-
-    @Autowired
-    private JwtUtil jwtUtil;
-
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     public AuthDto<String> genAccessToken(String secret) {
         AuthDto<String> responseVo = new AuthDto<>();

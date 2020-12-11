@@ -1,0 +1,21 @@
+version: "3"
+services:
+  tx:
+    image: redis:5.0.0
+    container_name: ${PROJECT_NAME}_tx_v1
+    command: redis-server --requirepass 123456
+    ports:
+      - ${PORT_TX}:6379
+  auth:
+    image: redis:5.0.0
+    container_name: ${PROJECT_NAME}_auth_v1
+    command: redis-server --requirepass 123456
+    ports:
+      - ${PORT_AUTH}:6379
+  seckill:
+    image: redis:5.0.0
+    container_name: ${PROJECT_NAME}_seckill_v1
+    command: redis-server --requirepass 123456
+    ports:
+      - ${PORT_SECKILL}:6379
+

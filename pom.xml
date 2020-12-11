@@ -23,6 +23,8 @@
         <module>api/admin</module>
         <module>api/merchant</module>
         <module>api/open</module>
+        <module>mq/kafka</module>
+        <module>mq/rabbitmq</module>
         <module>tx-manager</module>
     </modules>
 

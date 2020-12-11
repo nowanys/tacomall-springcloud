@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mycat:
+    build: .
+    container_name: mycat
+    volumes:
+      - ./config/mycat/:/mycat/conf/:ro
+      - ./log/mycat-logs/:/mycat/logs/:rw
+      #- /etc/localtime:/etc/localtime:ro
+      - ./config/hosts:/etc/hosts:ro
+    ports:
+      - "23000:8066"
+      - "23001:9066"
+    ulimits:
+      nproc: 65535
+    hostname: mycat
+#    mem_limit: 1024m
+    restart: always

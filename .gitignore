@@ -62,15 +62,6 @@ hs_err_pid*
 
 .vscode
 
-# git_hook
 
-.git_hook
-package.json
-package-lock.json
-
-# jd
-
-.jd
-
-#tx
+# tx
 .txlcn

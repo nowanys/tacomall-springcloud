@@ -1,7 +1,7 @@
 /***
  * @Author: 码上talk|RC
  * @Date: 2020-06-09 23:20:41
- * @LastEditTime: 2020-12-04 11:43:05
+ * @LastEditTime: 2020-12-07 16:12:56
  * @LastEditors: 码上talk|RC
  * @Description: 
  * @FilePath: /tacomall-springcloud/common/src/main/java/store/tacomall/common/servletInterceptor/AuthorizationInterceptor.java
@@ -54,7 +54,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
             ExceptionUtil.throwUnauthorizedException("UserAccessToken is require");
         }
 
-        if (!authFeignClient.virifyAppAccessToken(appAccessToken).getStatus()) {
+        if (!authFeignClient.verifyAppAccessToken(appAccessToken).getStatus()) {
             ExceptionUtil.throwUnauthorizedException("AppAccessToken verify fail");
         }
 
