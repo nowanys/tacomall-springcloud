@@ -63,7 +63,7 @@ spring cloud微服务基于spirngboot开发，还没有springboot开发基础？
         <td>商家管理后台</td>
     </tr>
     <tr>
-        <td><img title="码上talk" src="https://img.codingtalk.cn/cH6X2n51606387646573" height="200" width="200"/></td>
+        <td><img title="码上talk" src="https://img.codingtalk.cn/3Y4h5Zz1608078777538" height="200" width="200"/></td>
         <td><a href="http://tacomall.codingtalk.cn">>>>点击进入商家管理后台</td>
     </tr>
 </table>
@@ -72,14 +72,14 @@ spring cloud微服务基于spirngboot开发，还没有springboot开发基础？
 
 <table border="0">
     <tr>
-        <td>关注“码上talk”微信公众号</td>
-        <td>tacomall QQ交流群</td>
-        <td>我的微信</td>
+        <td>微信小程序（微信扫一扫）</td>
+        <td>商家管理后台</td>
+        <td>平台管理后台</td>
     </tr>
     <tr>
-        <td><img title="码上talk" src="https://img.codingtalk.cn/ncr3m3k1585147351285" height="200" width="200"/></td>
-        <td><img title="tacomall QQ交流群" src="https://img.codingtalk.cn/haPkJxc1585147447571" height="200" width="220"/></td>
-        <td><img title="码上talk|RC" src="https://img.codingtalk.cn/meJzskn1584540440273" height="200" width="220"/></td>
+        <td><img title="码上talk" src="https://img.codingtalk.cn/3Y4h5Zz1608078777538" height="200" width="200"/></td>
+        <td><a href="http://merchant.webtc.codingtalk.cn/login?t=trial">>>>点击进入商家管理后台</td>
+        <td><a href="http://admin.webtc.codingtalk.cn/login?t=trial">>>>点击进入平台管理后台</td>
     </tr>
 </table>
 
