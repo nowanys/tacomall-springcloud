@@ -1,8 +1,0 @@
-version: "3"
-services:
-  sekill:
-    image: daocloud.io/rabbitmq:3-management
-    container_name: ${PROJECT_NAME}_sekill_v1
-    ports:
-      - ${PORT_SECKILL}:5672
-      - ${PORT_CONSOLE_SECKILL}:15672
