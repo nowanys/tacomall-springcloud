@@ -1,0 +1,22 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: api-portal
+  profiles:
+    active: @environment@
+  cloud: 
+    alibaba:
+      seata:
+        tx-service-group: apiportal-service-group
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-aliases-package: store.tacomall.common.db
+  mapper-locations: classpath:/mapper/*Mapper.xml, classpath*:/mapper/*Mapper.xml
+wx:
+  miniapp:
+      appid: wx564dd23bb47073b1

@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          username: root
+          password: 123456
+          driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+          url: jdbc:p6spy:mysql://localhost:23000/tacomall?serverTimezone=Asia/Shanghai
+jobs:
+  admin-address: http://127.0.0.1:7040
+  app-name: job-executor
+  app-port: 9999

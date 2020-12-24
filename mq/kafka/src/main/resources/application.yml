@@ -1,0 +1,7 @@
+server:
+  port: 6001
+spring:
+  application:
+    name: mq-kafka
+  profiles:
+    active: @environment@

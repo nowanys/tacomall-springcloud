@@ -1,0 +1,22 @@
+server:
+  port: 4000
+spring:
+  profiles:
+    active: @environment@
+  application:
+    name: gateway
+zuul:
+  ignored-services: '*'
+  routes:
+    api-portal: /portal/**
+  auth:
+    tokenKey: user-access-token
+    userKey: login-user-id
+    configs:
+      - ISSUER: api-portal
+        require:
+          - /portal/**
+        ignore:
+          - /portal/member/wxMaLogin
+          - /portal/v2/api-docs
+

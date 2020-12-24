@@ -1,0 +1,23 @@
+server:
+  port: 8000
+spring:
+  profiles:
+    active: @environment@
+  application:
+    name: service-member
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-aliases-package: store.tacomall.common.db
+  mapper-locations: classpath:/mapper/*Mapper.xml

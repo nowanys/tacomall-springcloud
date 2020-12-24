@@ -1,0 +1,7 @@
+server:
+  port: 7020
+spring:
+  application:
+    name: config
+  profiles:
+    active: @environment@

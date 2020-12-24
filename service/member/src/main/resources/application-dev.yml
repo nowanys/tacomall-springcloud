@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+    alibaba:
+        seata:
+            tx-service-group: servicemember-service-group
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          username: root
+          password: 123456
+          driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+          url: jdbc:p6spy:mysql://localhost:23000/tacomall?serverTimezone=Asia/Shanghai
+  redis:
+    host: 127.0.0.1
+    port: 20000
+    password: 123456

@@ -1,0 +1,15 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: authorize
+  profiles:
+    active: @environment@
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  type-aliases-package: store.tacomall.common.db
+  mapper-locations: classpath:/mapper/*Mapper.xml
